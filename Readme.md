@@ -16,17 +16,26 @@ conda activate cv-nerf
 Use
 
 ```
-python main.py --train
+python train.py
 ```
 
 You can specify hyperparamers including but not restricted to the dataset path, the batch size, the positional encoding frequency, etc. The command above will list all possible arguments.
+
+The checkpoints will be saved at `checkpoints/{name}`, and testing results during training will be saved at `runs/{name}/train`.
 
 ## 3. Testing
 
 Use
 
 ```
-python main.py --test
+python test.py
 ```
 
-Much like in training, you can also specify arguments. 
+Much like in training, you can also specify arguments. You can find the testing results at `runs/{name}/train`.
+
+## 4. Testing Depths
+Use
+```
+python test_depth.py
+```
+You can also specify arguments.
